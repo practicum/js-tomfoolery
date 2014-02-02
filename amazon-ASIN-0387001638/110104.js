@@ -16,15 +16,19 @@ var numeralPrinters = [];
 // for example, to turn ( '-', 5 ) into '-----'
 function reps( s, n )
 {
-    var rslt = '';
-    var i = 0;
+    // create an array filled with nulls.
+    // call the join method with 's' as the SEPARATOR.
+    // this is a sort of hack. normally you might have:
+    //   [ 4, 5, 1, 2 ]  and then use join(':') to generate
+    //   a string like:  4:5:1:2
 
-    for ( i = 0; i < n; i++ )
-    {
-        rslt += s;
-    }
+    // this is rather 'classic' (all over stackoverflow, anyway), but jslint balks:
+    //return new Array( parseInt(n,10) + 1 ).join( s );
 
-    return rslt;
+    // the more terse version is above. here is one that jslint accepts:
+    var arr = [];
+    arr.length = parseInt(n,10) + 1;
+    return arr.join( s );
 }
 
 function padRight( a )
