@@ -17,8 +17,9 @@ var numeralPrinters = [];
 function reps( s, n )
 {
     var rslt = '';
+    var i = 0;
 
-    for ( var i = 0; i < n; i++ )
+    for ( i = 0; i < n; i++ )
     {
         rslt += s;
     }
@@ -28,7 +29,9 @@ function reps( s, n )
 
 function padRight( a )
 {
-    for ( var i = 0; i < a.length; i++ )
+    var i = 0;
+
+    for ( i = 0; i < a.length; i++ )
     {
         a[ i ] += ' ';
     }
@@ -48,11 +51,14 @@ zero:
 */
 numeralPrinters[0] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -63,7 +69,7 @@ numeralPrinters[0] = function ( ns, a )
     a[1+j] += reps( ' ', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += '|';
         a[2+j+k] += reps( ' ', ns );
@@ -88,16 +94,19 @@ one:
 
 numeralPrinters[1] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
     }
 
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += '|';
     }
@@ -119,11 +128,14 @@ two:
 */
 numeralPrinters[2] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += ' ';
         a[1+j] += reps( ' ', ns );
@@ -134,7 +146,7 @@ numeralPrinters[2] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += '|';
         a[2+j+k] += reps( ' ', ns );
@@ -148,11 +160,14 @@ numeralPrinters[2] = function ( ns, a )
 
 numeralPrinters[3] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += ' ';
         a[1+j] += reps( ' ', ns );
@@ -163,7 +178,7 @@ numeralPrinters[3] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += ' ';
         a[2+j+k] += reps( ' ', ns );
@@ -177,11 +192,14 @@ numeralPrinters[3] = function ( ns, a )
 
 numeralPrinters[4] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( ' ', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -192,7 +210,7 @@ numeralPrinters[4] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += ' ';
         a[2+j+k] += reps( ' ', ns );
@@ -206,11 +224,14 @@ numeralPrinters[4] = function ( ns, a )
 
 numeralPrinters[5] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -221,7 +242,7 @@ numeralPrinters[5] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += ' ';
         a[2+j+k] += reps( ' ', ns );
@@ -235,11 +256,14 @@ numeralPrinters[5] = function ( ns, a )
 
 numeralPrinters[6] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -250,7 +274,7 @@ numeralPrinters[6] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += '|';
         a[2+j+k] += reps( ' ', ns );
@@ -264,11 +288,14 @@ numeralPrinters[6] = function ( ns, a )
 
 numeralPrinters[7] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += ' ';
         a[1+j] += reps( ' ', ns );
@@ -279,7 +306,7 @@ numeralPrinters[7] = function ( ns, a )
     a[1+j] += reps( ' ', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += ' ';
         a[2+j+k] += reps( ' ', ns );
@@ -293,11 +320,14 @@ numeralPrinters[7] = function ( ns, a )
 
 numeralPrinters[8] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -308,7 +338,7 @@ numeralPrinters[8] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += '|';
         a[2+j+k] += reps( ' ', ns );
@@ -322,11 +352,14 @@ numeralPrinters[8] = function ( ns, a )
 
 numeralPrinters[9] = function ( ns, a )
 {
+    var j = 0;
+    var k = 0;
+
     a[0] += ' ';
     a[0] += reps( '-', ns );
     a[0] += ' ';
 
-    for ( var j = 0; j < ns; j++ )
+    for ( j = 0; j < ns; j++ )
     {
         a[1+j] += '|';
         a[1+j] += reps( ' ', ns );
@@ -337,7 +370,7 @@ numeralPrinters[9] = function ( ns, a )
     a[1+j] += reps( '-', ns );
     a[1+j] += ' ';
 
-    for ( var k = 0; k < ns; k++ )
+    for ( k = 0; k < ns; k++ )
     {
         a[2+j+k] += ' ';
         a[2+j+k] += reps( ' ', ns );
@@ -352,6 +385,9 @@ numeralPrinters[9] = function ( ns, a )
 function PrintableNumRow( numeralSize, printedText )
 {
     var ns = numeralSize;
+    var x = 0;
+    var i = 0;
+    var num = 0;
 
     if ( ns < 1 || ns > 10 )
     {
@@ -361,14 +397,14 @@ function PrintableNumRow( numeralSize, printedText )
     // a two-dimensional grid holding all the spaces,
     // pipe chars, and hypens of the 'LCD' numerals
     var printerGrid = [ '', '', '', '', '' ];
-    for ( var x = 0; x < ((ns-1)*2); x++ )
+    for ( x = 0; x < ((ns-1)*2); x++ )
     {
         printerGrid[ printerGrid.length ] = '';
     }
 
-    for ( var i = 0; i < printedText.toString().length; i++ )
+    for ( i = 0; i < printedText.toString().length; i++ )
     {
-        var num = printedText.charAt(i).valueOf();
+        num = printedText.charAt(i).valueOf();
         if ( num < 0 || num > 9 )
         {
             num = 0;
@@ -385,7 +421,7 @@ function PrintableNumRow( numeralSize, printedText )
 
     this.printToConsole = function()
     {
-        for ( var i = 0; i < printerGrid.length; i++ )
+        for ( i = 0; i < printerGrid.length; i++ )
         {
             console.log( printerGrid[ i ] );
         }
@@ -418,7 +454,9 @@ function BatchOfNumRows( maxRowCount )
 
     this.dumpOutput = function()
     {
-        for( var i = 0; i < numRows.length; i++ )
+        var i = 0;
+
+        for( i = 0; i < numRows.length; i++ )
         {
             numRows[ i ].printToConsole();
             // output one blank line after each number
@@ -430,14 +468,15 @@ function BatchOfNumRows( maxRowCount )
 BatchOfNumRows.prototype.parseAndAdd = function(chunk)
 {
     var rows = chunk.toString().split('\n');
+    var i = 0, words = 0;
 
-    for( var i = 0; i < rows.length; i++ )
+    for( i = 0; i < rows.length; i++ )
     {
-        var words = rows[i].split(' ');
+        words = rows[i].split(' ');
         if ( words && words.length > 1 )
         {
             // a line containing two zeroes means to terminate.
-            if ( words[0] == '0' && words[1] == '0' )
+            if ( words[0] === '0' && words[1] === '0' )
             {
                 break;
             }
